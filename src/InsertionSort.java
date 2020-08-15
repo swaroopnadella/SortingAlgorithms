@@ -1,4 +1,4 @@
-public class InsertSortAlgo {
+public class InsertionSort {
 	
 	public void printArray(int arr[]) {
 		
@@ -9,9 +9,10 @@ public class InsertSortAlgo {
 	
 	// Current element(key) is compared with previous elements of the array
 	// Remaining elements are moved ahead when key is smaller and then key is placed at correct position 
-	public void insertionSort(int arr[]) {
+	public void insertionSortAlgo(int arr[]) {
 		
 		int n = arr.length;
+		System.out.println("\n\nLength of array: "+n);
 		for(int i=1;i<n;i++) {
 			int key = arr[i];
 			int j = i-1;
@@ -26,13 +27,13 @@ public class InsertSortAlgo {
 
 	public static void main(String[] args) {
 		
-		InsertSortAlgo iSort = new InsertSortAlgo();
+		InsertionSort iSort = new InsertionSort();
 		
 		int arr[] = {32,24,49,11,87,65,90,324,765};
 		System.out.println("Original Array");
 		iSort.printArray(arr);
-		iSort.insertionSort(arr);
-		System.out.println("\nSorted Array");
+		iSort.insertionSortAlgo(arr);
+		System.out.println("\nSorted Array using Insertion Sort");
 		iSort.printArray(arr);
 		
 	}
